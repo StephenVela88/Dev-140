@@ -1,0 +1,59 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Competitive Tekken 6 Journey</title>
+</head>
+<body>
+
+    <header>
+        <h1>Competitive Tekken 6: My Tournament Years</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">The Iron Fist Transition</a></li>
+                <li><a href="#tournaments">Tournament History</a></li>
+                <li><a href="#gear">Competitive Setup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Adapting to the Rage and Bound Systems</h2>
+            <p>Tekken 6 introduced the Rage mechanic and Bound combo extensions, which completely transformed competitive play. I spent hundreds of hours mastering stage positioning and wall carry distances to maximize damage during critical tournament rounds.</p>
+            
+            <h3>Core Practice Routines</h3>
+            <ol>
+                <li>Optimizing Bound conversions from standard launchers</li>
+                <li>Practicing defensive spacing and Korean backdashing</li>
+                <li>Developing high-damage Rage comeback setups</li>
+            </ol>
+        </section>
+
+        <section id="tournaments">
+            <h2>Tournament History</h2>
+            
+            <article>
+                <h3>East Coast Arcade Championship 2010</h3>
+                <p>This event marked my first major competitive breakthrough. Fighting through the losers bracket required intense adaptation against top-tier Bob and Lars players, ultimately securing me a spot in the top eight.</p>
+            </article>
+
+            <article>
+                <h3>Regional Iron Fist Qualifier 2011</h3>
+                <p>An intense double-elimination bracket where match knowledge and frame data memorization made all the difference during the final rounds.</p>
+            </article>
+        </section>
+
+        <section id="gear">
+            <h2>Competitive Setup</h2>
+            <p>Every serious competitor needed dependable hardware for zero-latency inputs during offline brackets.</p>
+            <img src="arcade-stick.jpg" alt="Custom modified arcade stick with authentic Sanwa buttons and a square gate joystick used for Tekken 6 tournaments">
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2026 Competitive Tekken Archive. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
