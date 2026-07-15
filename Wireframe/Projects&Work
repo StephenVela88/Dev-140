@@ -8,6 +8,7 @@
 <body>
 
   <header>
+    <h1>Navigation</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -20,31 +21,31 @@
   <main>
     <section>
       <h1>Projects and Work</h1>
-      <p>Here is a comprehensive list of my recent technical projects and open-source contributions.</p>
+      <p>Here is a look at some of my works.</p>
     </section>
 
     <section>
       <article>
-        <h2>E-Commerce Platform</h2>
-        <h3>Role: Full Stack Developer</h3>
-        <p>[Image Placeholder: Screenshot of E-Commerce Platform]</p>
-        <p>Developed a full-featured online store with product filtering, cart management, and secure checkout.</p>
+        <h2>Work 1</h2>
+        <h3>Role: Worker</h3>
+        <p>[Image Placeholder: Screenshot of work results]</p>
+        <p>Developed a full-featured online page using:</p>
         <ul>
           <li>HTML5 and Semantic Web</li>
+          <li>Magic</li>
           <li>JavaScript</li>
-          <li>Node.js</li>
         </ul>
       </article>
 
       <article>
-        <h2>Task Management Application</h2>
-        <h3>Role: Front-End Developer</h3>
-        <p>[Image Placeholder: Screenshot of Task App]</p>
-        <p>Created a productivity tool allowing users to categorize tasks, set deadlines, and track daily progress.</p>
+        <h2>Work 2</h2>
+        <h3>Role: Worker</h3>
+        <p>[Image Placeholder: Screenshot of work results]</p>
+        <p>Created a productivity tool for: </p>
         <ul>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>React</li>
+          <li>Time Management</li>
+          <li>Birthday Reminders</li>
+          <li>Reminder Reminders</li>
         </ul>
       </article>
     </section>
