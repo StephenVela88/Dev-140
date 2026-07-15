@@ -7,19 +7,21 @@
 <body>
 
     <header>
-        <h1>Competitive Tekken 6: My Tournament Years</h1>
+        <h1>Competitive Tekken 6:
+            My Tournament Years</h1>
         <nav>
             <ul>
-                <li><a href="#about">The Iron Fist Transition</a></li>
+                <li><a href="#about">The New Era Of Tekken</a></li>
                 <li><a href="#tournaments">Tournament History</a></li>
-                <li><a href="#gear">Competitive Setup</a></li>
+                <li><a href="#gear">Hardware
+                </a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="about">
-            <h2>Adapting to the Rage and Bound Systems</h2>
+            <h2>Adapting to the New Systems</h2>
             <p>Tekken 6 introduced the Rage mechanic and Bound combo extensions, which completely transformed competitive play. I spent hundreds of hours mastering stage positioning and wall carry distances to maximize damage during critical tournament rounds.</p>
             
             <h3>Core Practice Routines</h3>
@@ -31,7 +33,7 @@
         </section>
 
         <section id="tournaments">
-            <h2>Tournament History</h2>
+            <h2>Some Tournament History</h2>
             
             <article>
                 <h3>East Coast Arcade Championship 2010</h3>
@@ -47,12 +49,13 @@
         <section id="gear">
             <h2>Competitive Setup</h2>
             <p>Every serious competitor needed dependable hardware for zero-latency inputs during offline brackets.</p>
-            <img src="arcade-stick.jpg" alt="Custom modified arcade stick with authentic Sanwa buttons and a square gate joystick used for Tekken 6 tournaments">
+            <img SRC="NAMCO_FS.jpg" ALT="My limited edition NAMCO Tekken 6 fight stick."
         </section>
     </main>
 
     <footer>
-        <p>Copyright 2026 Competitive Tekken Archive. All rights reserved.</p>
+        <h2>Giving Back to the Community</h2>
+        <p>While I no longer compete, I now offer coaching to competitive Tekken 8 players through my sponsorship partner, GameStop. </p>
     </footer>
 
 </body>
