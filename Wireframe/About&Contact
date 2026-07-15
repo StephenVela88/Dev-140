@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About and Contact | Personal Portfolio</title>
+</head>
+<body>
+
+  <header>
+    <h1>Navigation</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects and Work</a></li>
+        <li><a href="about.html">About and Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Contact</h1>
+      <p>[Image Placeholder: My Photo]</p>
+      <p>Personal Information About Myself</p>
+      <p>Text about how I'd love to hear from you!</p>
+    </section>
+
+    <section>
+      <h2>Location and Availability</h2>
+      <ul>
+        <li>Schedule: By appointment only</li>
+        <li>Only available on weekdays</li>
+        <li>Must bring lunch for both of us</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Get in Touch</h2>
+      <p>Instructions on how to send email.</p>
+      <p>[Form Placeholder: Contact Form]</p>
+    <ul>
+        <li>Email: john.doe@example.com</li>
+        <li>Topic: General Inquiry</li>
+        <li>Food: Italian</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Closing Text Goes Here!</p>
+  </footer>
+
+</body>
+</html>
