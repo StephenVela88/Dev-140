@@ -20,30 +20,30 @@ HTML
 
   <main>
     <section>
-      <h1>Hello, I am a Software Developer</h1>
-      <p>I build clean, accessible, and responsive web applications.</p>
+      <h1>Hello, My name is Steve!</h1>
+      <p>Here is where I would place my introduction and a brief overview of my skills and experience.</p>
       <p><a href="projects.html">View My Work</a></p>
     </section>
 
     <section>
-      <h2>Featured Projects</h2>
+      <h2>All My Stuff</h2>
       
       <article>
-        <h3>Project Alpha</h3>
-        <p>A brief description of this featured project goes here.</p>
+        <h3>Project 1</h3>
+        <p>This is where the description goes.</p>
         <p><a href="projects.html">Read more</a></p>
       </article>
 
       <article>
-        <h3>Project Beta</h3>
-        <p>A brief description of this featured project goes here.</p>
+        <h3>Project 2</h3>
+        <p>This is where the desc- Is there an echo?</p>
         <p><a href="projects.html">Read more</a></p>
       </article>
     </section>
   </main>
 
   <footer>
-    <p>Copyright 2026 Personal Portfolio. All rights reserved.</p>
+    <p>Bottom closing text goes here!</p>
   </footer>
 
 </body>
