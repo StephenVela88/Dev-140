@@ -1,0 +1,50 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Personal Portfolio</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects and Work</a></li>
+        <li><a href="about.html">About and Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Hello, I am a Software Developer</h1>
+      <p>I build clean, accessible, and responsive web applications.</p>
+      <p><a href="projects.html">View My Work</a></p>
+    </section>
+
+    <section>
+      <h2>Featured Projects</h2>
+      
+      <article>
+        <h3>Project Alpha</h3>
+        <p>A brief description of this featured project goes here.</p>
+        <p><a href="projects.html">Read more</a></p>
+      </article>
+
+      <article>
+        <h3>Project Beta</h3>
+        <p>A brief description of this featured project goes here.</p>
+        <p><a href="projects.html">Read more</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright 2026 Personal Portfolio. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
