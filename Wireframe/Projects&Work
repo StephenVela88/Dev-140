@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects and Work | Personal Portfolio</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects and Work</a></li>
+        <li><a href="about.html">About and Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Projects and Work</h1>
+      <p>Here is a comprehensive list of my recent technical projects and open-source contributions.</p>
+    </section>
+
+    <section>
+      <article>
+        <h2>E-Commerce Platform</h2>
+        <h3>Role: Full Stack Developer</h3>
+        <p>[Image Placeholder: Screenshot of E-Commerce Platform]</p>
+        <p>Developed a full-featured online store with product filtering, cart management, and secure checkout.</p>
+        <ul>
+          <li>HTML5 and Semantic Web</li>
+          <li>JavaScript</li>
+          <li>Node.js</li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Task Management Application</h2>
+        <h3>Role: Front-End Developer</h3>
+        <p>[Image Placeholder: Screenshot of Task App]</p>
+        <p>Created a productivity tool allowing users to categorize tasks, set deadlines, and track daily progress.</p>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>React</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Closing Remarks!</p>
+  </footer>
+
+</body>
+</html>

@@ -1,4 +1,3 @@
-HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,10 +16,9 @@ HTML
       </ul>
     </nav>
   </header>
-
   <main>
     <section>
-      <h1>Hello, My name is Steve!</h1>
+<h1>Hello, My Name Is Steve!</h1>
       <p>Here is where I would place my introduction and a brief overview of my skills and experience.</p>
       <p><a href="projects.html">View My Work</a></p>
     </section>
