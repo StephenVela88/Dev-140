@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Home - Rad Stuff</title>
+  <style>
+    :root {
+      --bg-dark: #121218;
+      --text-rich: #f0f4f8;
+      --accent-blue: #00a8ff;
+      --accent-cool: #00ffff;
+      --accent-gold: #ffd700;
+      --cork-bg: #d4b583;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-rich);
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Interactive Canvas Background */
+    #bg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(135deg, #0d0d13 0%, #1a1a2e 50%, #16213e 100%);
+    }
+
+    /* Page Navigation & Layout */
+    .page-section {
+      display: none;
+      min-height: 100vh;
+      padding: 40px 20px 80px;
+      max-width: 1000px;
+      margin: 0 auto;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .page-section.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      color: #a0a8b0;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      gap: 30px;
+      margin-top: 40px;
+      padding: 15px 30px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 30px;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent-cool);
+      transform: scale(1.1);
+    }
+
+    /* --- Page 2: Main --- */
+    .explosion-box {
+      border: 4px solid var(--accent-cool);
+      border-radius: 10px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.1s;
+      max-width: 600px;
+      margin: 20px 0;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    }
+
+    .explosion-box:hover {
+      transform: scale(1.02);
+    }
+
+    .explosion-graphic {
+      font-size: 5rem;
+      margin: 20px 0;
+      user-select: none;
+    }
+
+    .cool-caption {
+      font-weight: bold;
+      color: var(--accent-cool);
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    .main-content {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .main-content h2 {
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .main-content p {
+      font-size: 1.4rem;
+      color: var(--accent-cool);
+      font-weight: bold;
+    }
+
+    /* --- Page 3: About --- */
+    .about-card {
+      background: #f8f9fa;
+      color: #1a1a1a;
+      width: 100%;
+      border-radius: 15px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 40px;
+      background-image: radial-gradient(#dcdcdc 15%, transparent 16%);
+      background-size: 10px 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .about-left h2 {
+      font-size: 2.5rem;
+      color: var(--accent-gold);
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      margin-bottom: 20px;
+    }
+
+    .stats-list {
+      list-style: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .section-block {
+      margin-bottom: 20px;
+    }
+
+    .section-block h3 {
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+      border-bottom: 2px solid #333;
+      display: inline-block;
+    }
+
+    .section-block ol, .section-block ul {
+      margin-left: 25px;
+      margin-top: 5px;
+      font-weight: 500;
+    }
+
+    .about-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .photo-frame {
+      width: 200px;
+      height: 200px;
+      border: 4px solid #000;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+      box-shadow: 5px 5px 0px var(--accent-gold);
+    }
+
+    .photo-frame .avatar {
+      font-size: 5rem;
+    }
+
+    .sound-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #000;
+      color: var(--accent-gold);
+      border: 2px solid var(--accent-gold);
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .sound-btn:hover {
+      background: #333;
+    }
+
+    /* --- Page 4: Contact --- */
+    .cork-board {
+      background-color: var(--cork-bg);
+      background-image: radial-gradient(rgba(0,0,0,0.1) 15%, transparent 16%);
+      background-size: 8px 8px;
+      border: 12px solid #5c4033;
+      border-radius: 10px;
+      padding: 30px;
+      color: #2b1d0c;
+      width: 100%;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+      position: relative;
+    }
+
+    .contact-header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px dashed #8b5a2b;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .contact-details {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      background: #fff9e6;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .pin {
+      width: 16px;
+      height: 16px;
+      background: #ff3333;
+      border-radius: 50%;
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+
+    .scheduler-section {
+      margin-top: 30px;
+      text-align: center;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .scheduler-btn {
+      margin-top: 15px;
+      width: 100%;
+      max-width: 400px;
+      padding: 12px 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background: #f0f0f0;
+      border: 2px solid #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .scheduler-form {
+      display: none;
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .scheduler-form input, .scheduler-form select {
+      padding: 10px;
+      border: 1px solid #999;
+      border-radius: 4px;
+    }
+
+    .scheduler-form button {
+      padding: 10px;
+      background: #2b1d0c;
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .about-card { grid-template-columns: 1fr; }
+      .contact-header { flex-direction: column; gap: 15px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Interactive Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- PAGE 1: HOME -->
+  <section id="home" class="page-section active">
+    <div></div>
+    <div class="hero">
+      <h1>Website Home</h1>
+      <div class="subtitle">Title Place Holder</div>
+    </div>
+    <nav>
+      <a onclick="showPage('main')">Main Link</a>
+      <a onclick="showPage('about')">About Link</a>
+      <a onclick="showPage('contact')">Contact Link</a>
+    </nav>
+  </section>
+
+  <!-- PAGE 2: MAIN -->
+  <section id="main" class="page-section">
+    <h1>Main</h1>
+    
+    <!-- Interactive Image Box -->
+    <div class="explosion-box" onclick="triggerExplosion(this)">
+      <div class="explosion-graphic" id="explosion-icon">😎 💥</div>
+      <div class="cool-caption">Cool Guys Don't Look Back At Explosions<br><small>- Some Cool Guy</small></div>
+      <div style="font-size: 0.8rem; color: #aaa; margin-top: 5px;">(Click box for interaction)</div>
+    </div>
+
+    <div class="main-content">
+      <h2>All About Me And My Plan</h2>
+      <p>Rad Stuff That Will Blow Your Mind</p>
+    </div>
+
+    <nav>
+      <a onclick="showPage('home')">Home Link</a>
+      <a onclick="showPage('about')">About Link</a>
+      <a onclick="showPage('contact')">Contact Link</a>
+    </nav>
+  </section>
+
+  <!-- PAGE 3: ABOUT -->
+  <section id="about" class="page-section">
+    <h1>About</h1>
+    
+    <div class="about-card">
+      <div class="about-left">
+        <h2>Name</h2>
+        <ul class="stats-list">
+          <li>Sweet Stats</li>
+          <li>Amazing Facts</li>
+          <li>Awesome Traits</li>
+          <li>Things you wouldn't believe</li>
+        </ul>
+
+        <div class="section-block">
+          <h3>Goals</h3>
+          <ol>
+            <li>Win</li>
+            <li>Win Better</li>
+          </ol>
+        </div>
+
+        <div class="section-block">
+          <h3>Passions</h3>
+          <ul>
+            <li>The goods</li>
+          </ul>
+        </div>
+
+        <div class="section-block">
+          <h3>Achievements</h3>
+          <ul>
+            <li>Best Believe</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="about-right">
+        <div class="photo-frame">
+          <div class="avatar">🧔🏻‍♂️👍</div>
+          <strong>Handsome Photo</strong>
+        </div>
+        <button class="sound-btn" onclick="playRadSound()">🔊 Play Rad Sound</button>
+      </div>
+    </div>
+
+    <nav>
+      <a onclick="showPage('home')">Home Link</a>
+      <a onclick="showPage('main')">Main Link</a>
+      <a onclick="showPage('contact')">Contact Link</a>
+    </nav>
+  </section>
+
+  <!-- PAGE 4: CONTACT -->
+  <section id="contact" class="page-section">
+    <h1>Contact</h1>
+
+    <div class="cork-board">
+      <div class="pin"></div>
+      
+      <div class="contact-header">
+        <div>Questions?<br>Comments?<br>Concerns?</div>
+        <div style="text-align: right;">Please Reach Out<br>Monday-Friday<br>8AM - 5PM</div>
+      </div>
+
+      <div class="contact-details">
+        <div class="pin" style="background: #3388ff;"></div>
+        <p><strong>My Email:</strong> Homew0rk_Kill3r@school.edu</p>
+        <p><strong>My Address:</strong> 1313 Mocking Bird Ln, Mockingbird Heights, Washington</p>
+        <p><strong>My Phone:</strong> (555) 867-5309</p>
+      </div>
+
+      <div class="scheduler-section">
+        <h3>To Set An Appointment<br>Please Provide Your Information Here</h3>
+        <button class="scheduler-btn" onclick="toggleScheduler()">
+          <span>Scheduler</span>
+          <span>⬇️</span>
+        </button>
+        
+        <form class="scheduler-form" id="scheduler-form" onsubmit="submitAppointment(event)">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <input type="date" required>
+          <select required>
+            <option value="">Select Time Slot</option>
+            <option value="morning">Morning (8AM - 12PM)</option>
+            <option value="afternoon">Afternoon (1PM - 5PM)</option>
+          </select>
+          <button type="submit">Book Appointment</button>
+        </form>
+      </div>
+    </div>
+
+    <nav>
+      <a onclick="showPage('home')">Home Link</a>
+      <a onclick="showPage('main')">Main Link</a>
+      <a onclick="showPage('about')">About Link</a>
+    </nav>
+  </section>
+
+  <!-- Page Interactivity Scripts -->
+  <script>
+    // Navigation Controller
+    function showPage(pageId) {
+      document.querySelectorAll('.page-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(pageId).classList.add('active');
+      window.scrollTo(0, 0);
+    }
+
+    // Main Page Explosion Effect
+    function triggerExplosion(element) {
+      const icon = document.getElementById('explosion-icon');
+      icon.innerHTML = '🔥 💥 🚀';
+      element.style.transform = 'scale(1.05) rotate(1deg)';
+      element.style.borderColor = '#ff3300';
+      
+      setTimeout(() => {
+        icon.innerHTML = '😎 💥';
+        element.style.transform = 'none';
+        element.style.borderColor = 'var(--accent-cool)';
+      }, 800);
+    }
+
+    // About Page Audio Effect
+    function playRadSound() {
+      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(440, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.3);
+      
+      gain.gain.setValueAtTime(0.5, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+      
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.3);
+      alert('🤘 Rad sound effect triggered!');
+    }
+
+    // Contact Page Scheduler Toggle
+    function toggleScheduler() {
+      const form = document.getElementById('scheduler-form');
+      form.style.display = form.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    function submitAppointment(e) {
+      e.preventDefault();
+      alert('Appointment request submitted successfully!');
+      document.getElementById('scheduler-form').reset();
+      toggleScheduler();
+    }
+
+    // Interactive Background Particles
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.vx = (Math.random() - 0.5) * 0.5;
+        this.vy = (Math.random() - 0.5) * 0.5;
+        this.radius = Math.random() * 2 + 1;
+        this.alpha = Math.random() * 0.5 + 0.2;
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x < 0 || this.x > width || this.y < 0 || this.y > height) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0, 255, 255, ${this.alpha})`;
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < 60; i++) {
+      particles.push(new Particle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
+</body>
+</html>
