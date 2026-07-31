@@ -130,7 +130,7 @@ section {
   text-decoration: none;
 }
 
-/* Grid Multi layouts */
+/* Grid layouts */
 .grid-container, 
 main section:nth-of-type(2) {
   display: grid;
@@ -156,8 +156,6 @@ footer {
   padding-top: var(--space-24);
   text-align: center;
 }
-
-/* 5. Responsive */
 
 /* Tablet (768px and up) */
 @media (min-width: 768px) {
@@ -200,10 +198,11 @@ footer {
     padding: var(--space-32) 0;
   }
 
-  /* Big Screen */
+  /* Big Screen - Adjusted to 3 columns to line up better */
   .grid-container, 
   main section:nth-of-type(2) {
     gap: var(--space-32);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   article, .card {
