@@ -1,10 +1,16 @@
+/* Update for Homework 3 changes */
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #0d1b2a;
     color: #e0e1dd;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 15px;
 }
 
 header {
@@ -12,20 +18,32 @@ header {
     border-bottom: 4px solid #ff7f50;
     margin-bottom: 30px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 h1, h2, h3 {
     color: #ff7f50;
 }
 
+nav {
+    width: 100%;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
 }
 
 nav li {
-    display: inline-block;
-    margin-right: 15px;
+    margin: 0;
 }
 
 a {
@@ -46,12 +64,15 @@ a:hover {
 
 #tournaments {
     margin: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 .event-card {
     background-color: #162447;
     border-left: 5px solid #ff7f50;
-    margin: 15px 0;
+    margin: 0;
     padding: 15px 20px;
 }
 
@@ -60,7 +81,9 @@ img {
     border: 3px solid #ff7f50;
     margin: 15px 0;
     max-width: 100%;
+    height: auto;
     padding: 5px;
+    display: block;
 }
 
 footer {
@@ -68,4 +91,33 @@ footer {
     margin-top: 40px;
     padding-top: 20px;
     text-align: center;
+}
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    #tournaments {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    #tournaments {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
