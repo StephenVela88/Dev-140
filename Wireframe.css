@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&family=Rubik:wght@400&display=swap');
 
 :root {
-  /* Updated color scheme */
-  --bg-dark: #000000;
-  --bg-card: #111111;
-  --text-main: #FFD700;
+  /*Colors*/
+  --bg-dark: #0d1b2a;
+  --bg-card: #1b263b;
+  --text-main: #ff7f50;
   --text-bright: #FFFFFF;
-  --accent-orange: #FF8C00;
-  --accent-hover: #FFA500;
-  --error-red: #FF4C4C;
+  --accent-orange: #ff7f50;
+  --accent-hover: #ff7f50;
+  --error-red: #ff7f50;
 
-  /* Spacers */
+  /*Spacers*/
   --space-8: 8px;
   --space-16: 16px;
   --space-24: 24px;
@@ -20,7 +20,7 @@
   --space-64: 64px;
 }
 
-/* Base Style */
+/*Style*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -192,7 +192,7 @@ main section:nth-of-type(2) {
 
 .card, article {
   background-color: var(--bg-card);
-  border: 1px solid rgba(255, 140, 0, 0.2);
+  border: 1px solid rgb(255, 107, 53);
   border-radius: 8px;
   padding: var(--space-24);
 }
