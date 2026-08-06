@@ -19,17 +19,10 @@
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h1>Contact</h1>
-      <p>[Image Placeholder: My Photo]</p>
-      <p>Personal Information About Myself</p>
-      <p>Text about how I'd love to hear from you!</p>
-    </section>
-
     <section>
       <h2>Location and Availability</h2>
       <ul>
+        <li>Located in Harlingen, Texas</li>
         <li>Schedule: By appointment only</li>
         <li>Only available on weekdays</li>
         <li>Must bring lunch for both of us</li>
@@ -38,13 +31,34 @@
 
     <section>
       <h2>Get in Touch</h2>
-      <p>Instructions on how to send email.</p>
-      <p>[Form Placeholder: Contact Form]</p>
-    <ul>
-        <li>Email: john.doe@example.com</li>
-        <li>Topic: General Inquiry</li>
-        <li>Food: Italian</li>
-      </ul>
+      <p>Please use the form below to send an inquiry.</p>
+      
+      <form action="#" method="POST" novalidate>
+
+        <fieldset>
+          <legend>Contact Form</legend>
+          
+          <div class="form-group">
+            <label for="userName">Full Name</label>
+            <input type="text" id="userName" name="userName" required aria-describedby="nameError">
+            <span class="error-message" id="nameError">Name is required.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="userEmail">Email Address</label>
+            <input type="email" id="userEmail" name="userEmail" required aria-invalid="true" aria-describedby="emailError">
+            <span class="error-message" id="emailError" role="alert">Please enter a valid email address.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="userMessage">Message</label>
+            <textarea id="userMessage" name="userMessage" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Message</button>
+        </fieldset>
+      </form>
+
     </section>
   </main>
 
