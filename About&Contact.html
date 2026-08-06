@@ -19,6 +19,14 @@
     </nav>
   </header>
 
+  <main>
+    <section>
+      <h1>Contact</h1>
+      <p>[Image Placeholder: My Photo]</p>
+      <p>Personal Information About Myself</p>
+      <p>Text about how I would love to hear from you!</p>
+    </section>
+
     <section>
       <h2>Location and Availability</h2>
       <ul>
@@ -30,23 +38,34 @@
     </section>
 
     <section>
-      <h2>Get In Touch</h2>
+      <h2>Get in Touch</h2>
       <p>Please use the form below to send an inquiry.</p>
-      <form name="message" method="post">
-    <section>
-    <label for="name">Name</label>
-    <input id="name" type="text" value="" name="name">
-    <label for="email">Email</label>
-    <input id="email" type="text" value="" name="email">
-    </section>
-    <section>
-    <label for="subject">Subject</label>
-    <input id="subject" type="text" value="" name="subject">
-    <label for="message">Message</label>
-    <textarea id="message" value="" name="message" rows="5"></textarea>
-    </section>
-  <button type="submit">Send Message</button>
-</form>
+      
+      <form action="#" method="POST" novalidate>
+        <fieldset>
+          <legend>Contact Form</legend>
+          
+          <div class="form-group">
+            <label for="userName">Full Name</label>
+            <input type="text" id="userName" name="userName" aria-describedby="nameError">
+            <span class="error-message" id="nameError">Name is.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="userEmail">Email Address</label>
+            <input type="email" id="userEmail" name="userEmail" aria-invalid="true" aria-describedby="emailError">
+            <span class="error-message" id="emailError" role="alert">Please enter a valid email address.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="userMessage">Message</label>
+            <textarea id="userMessage" name="userMessage" rows="5"></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Message</button>
+        </fieldset>
+      </form>
+
     </section>
   </main>
 
