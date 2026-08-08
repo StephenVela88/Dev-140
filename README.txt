@@ -17,10 +17,10 @@ Removed both links and replaced with description text since they were just redir
 
 
 
-Assignment Additions and Works:
+Assignment Gestalt Additions and Works:
 
-I added the .form-group class to make the labels and error messages that belong to the corresponding inputs.
+1 Proximity: I used proximity to group the related elements together in each .form-group block, showing the labels and error messages that belong to the text inputs.
 
-I matched the new contact information form by putting the entire form inside a fieldset with a the matching background color and orange border to visually separate the input collection, but matching the page theme.
+2 Common Region: I used common region by wrapping the entire form inside a 'fieldset' with the themed background and border colors to mesh the input collection with the general page content, but visually separated with an additional border.
 
-The inputs I added to the structure classes and text areas made them similar so users instinctively recognizable and will identify them as interactive fields.  
+3 Similarity: I used similarity by applying identical structural classes to all text inputs and areas so users instinctively recognize them as interactive fields. I also have them balance the color scheme as well.
