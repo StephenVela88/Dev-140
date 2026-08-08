@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&family=Rubik:wght@400&display=swap');
 
 :root {
-  /*Colors*/
+  /*Shortcuts - Colors*/
   --bg-dark: #0d1b2a;
   --bg-card: #1b263b;
   --text-main: #ff7f50;
@@ -11,7 +11,7 @@
   --accent-hover: #ff7f50;
   --error-red: #ff7f50;
 
-  /*Spacers*/
+  /*Shortcuts - Spacing*/
   --space-8: 8px;
   --space-16: 16px;
   --space-24: 24px;
@@ -107,6 +107,10 @@ nav a {
 main {
   margin: 0 auto;
   max-width: 1200px;
+}
+
+All My Stuff{
+  border-bottom: 2px solid var(--accent-orange);
 }
 
 section {
