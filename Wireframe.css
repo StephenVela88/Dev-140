@@ -37,7 +37,9 @@ body {
   padding: var(--space-16);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--accent-orange);
   font-family: 'Work Sans', sans-serif;
   font-weight: 700;
@@ -58,7 +60,8 @@ h3 {
   font-size: 1.25rem;
 }
 
-p, ul {
+p,
+ul {
   margin-bottom: var(--space-16);
 }
 
@@ -79,7 +82,8 @@ a:hover {
 }
 
 /* FLEXBOX IDs */
-#main-header, header {
+#main-header,
+header {
   background-color: var(--bg-card);
   border-bottom: 2px solid var(--accent-orange);
   margin-bottom: var(--space-32);
@@ -130,6 +134,10 @@ section {
   background-color: var(--accent-hover);
   color: var(--bg-dark);
   text-decoration: none;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px var(--orange-shadow);
+    background-color: var(--bg-card);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* G1 - Common Region */
@@ -160,7 +168,9 @@ label {
 }
 
 /* G3 - Similarity */
-input, textarea {
+
+input,
+textarea {
   background-color: var(--bg-dark);
   border: 1px solid var(--text-main);
   border-radius: 4px;
@@ -177,30 +187,35 @@ input, textarea {
   margin-top: var(--space-8);
 }
 
-input[aria-invalid="true"], textarea[aria-invalid="true"] {
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
   border-color: var(--error-red);
 }
 
 /* W3 Form-grids */
-.grid-container, 
+.grid-container,
 main section:nth-of-type(2) {
   display: grid;
   gap: var(--space-24);
-  grid-template-columns: 1fr; 
+  grid-template-columns: 1fr;
 }
 
-.card, article{
+.card,
+article {
   background-color: var(--bg-card);
   border: 1px solid var(--accent-orange);
   border-radius: 8px;
   padding: var(--space-24);
 }
-.card, article h2{
+
+.card,
+article h2 {
   background-color: var(--bg-card);
   border: 1px solid var(--accent-orange);
   border-radius: 8px;
   padding: var(--space-16x16);
 }
+
 article ul {
   list-style-type: disc;
   padding-left: var(--space-24);
@@ -232,7 +247,7 @@ footer {
     font-size: 2.5rem;
   }
 
-  .grid-container, 
+  .grid-container,
   main section:nth-of-type(2) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -251,13 +266,14 @@ footer {
     padding: var(--space-32) 0;
   }
 
-  .grid-container, 
+  .grid-container,
   main section:nth-of-type(2) {
     gap: var(--space-32);
     grid-template-columns: repeat(3, 1fr);
   }
 
-  article, .card {
+  article,
+  .card {
     padding: var(--space-32);
   }
 }
