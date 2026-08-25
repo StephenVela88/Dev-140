@@ -24,7 +24,7 @@ if (navContainer && navList) {
   navContainer.parentNode.insertBefore(menuBtn, navContainer)
 }
 
-// 2. Form Validation: Contact Form Rules
+// Forms 
 const contactForm = document.querySelector('form')
 
 if (contactForm) {
@@ -46,7 +46,8 @@ if (contactForm) {
     const emailInput = document.getElementById('userEmail')
     const emailError = document.getElementById('emailError')
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-
+    const isValid = emailRegex.test("user@example.com");
+    
     if (!emailRegex.test(emailInput.value.trim())) {
       emailError.style.display = 'block'
       emailInput.setAttribute('aria-invalid', 'true')
@@ -62,7 +63,7 @@ if (contactForm) {
   })
 }
 
-// 3. API Fetch: Display a Random Fact on the Home Page
+// Random Fact Home
 const homeMain = document.querySelector('main section:first-of-type')
 
 if (homeMain && document.title.includes('Home')) {
