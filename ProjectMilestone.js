@@ -1,4 +1,4 @@
-// DOM
+// 1. DOM Interaction: Accessible Mobile Navigation Toggle
 const navContainer = document.querySelector('nav')
 const navList = document.querySelector('nav ul')
 
@@ -6,6 +6,7 @@ if (navContainer && navList) {
   const menuBtn = document.createElement('button')
   menuBtn.textContent = 'Toggle Menu'
   menuBtn.classList.add('btn')
+  
   menuBtn.setAttribute('aria-expanded', 'false')
   menuBtn.setAttribute('aria-controls', 'main-nav')
   navList.id = 'main-nav'
@@ -23,12 +24,13 @@ if (navContainer && navList) {
   navContainer.parentNode.insertBefore(menuBtn, navContainer)
 }
 
-// Forms
+// 2. Form Validation: Contact Form Rules
 const contactForm = document.querySelector('form')
 
 if (contactForm) {
   contactForm.addEventListener('submit', (event) => {
     let isFormValid = true
+
     const nameInput = document.getElementById('userName')
     const nameError = document.getElementById('nameError')
 
@@ -43,7 +45,7 @@ if (contactForm) {
 
     const emailInput = document.getElementById('userEmail')
     const emailError = document.getElementById('emailError')
-    const emailRegex = /NOTHING/
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
     if (!emailRegex.test(emailInput.value.trim())) {
       emailError.style.display = 'block'
@@ -60,7 +62,7 @@ if (contactForm) {
   })
 }
 
-// Random Fact
+// 3. API Fetch: Display a Random Fact on the Home Page
 const homeMain = document.querySelector('main section:first-of-type')
 
 if (homeMain && document.title.includes('Home')) {
@@ -76,13 +78,13 @@ if (homeMain && document.title.includes('Home')) {
   apiArticle.appendChild(apiContent)
   homeMain.appendChild(apiArticle)
 
-  fetch('https://v2.jokeapi.dev/joke/Any?safe-mode')
+  fetch('https://uselessfacts.jsph.pl/api/v2/facts/random')
     .then(response => response.json())
     .then(data => {
       apiContent.textContent = data.text
     })
     .catch(error => {
-      apiContent.textContent = 'The Joke Ran Away. Please Try Again Later.'
+      apiContent.textContent = 'Could not load a fact at this time.'
       console.error('API Error:', error)
     })
 }
