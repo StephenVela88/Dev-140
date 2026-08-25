@@ -60,7 +60,7 @@ if (contactForm) {
   })
 }
 
-// 3. API Fetch: Display a Random Fact on the Home Page
+// Random Fact
 const homeMain = document.querySelector('main section:first-of-type')
 
 if (homeMain && document.title.includes('Home')) {
@@ -76,13 +76,13 @@ if (homeMain && document.title.includes('Home')) {
   apiArticle.appendChild(apiContent)
   homeMain.appendChild(apiArticle)
 
-  fetch('https://uselessfacts.jsph.pl/api/v2/facts/random')
+  fetch('https://v2.jokeapi.dev/joke/Any?safe-mode')
     .then(response => response.json())
     .then(data => {
       apiContent.textContent = data.text
     })
     .catch(error => {
-      apiContent.textContent = 'Could not load a fact at this time.'
+      apiContent.textContent = 'The Joke Ran Away. Please Try Again Later.'
       console.error('API Error:', error)
     })
 }
