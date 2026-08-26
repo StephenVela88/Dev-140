@@ -1,4 +1,4 @@
-// 1. DOM Interaction: Accessible Mobile Navigation Toggle
+// Nav Button Toggle
 const navContainer = document.querySelector('nav')
 const navList = document.querySelector('nav ul')
 

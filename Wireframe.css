@@ -11,6 +11,8 @@
   --accent-hover: #ff7f50;
   --error-red: #ff7f50;
 
+
+
   /*Shortcuts - Spacing*/
   --space-8: 8px;
   --space-16: 16px;
@@ -282,4 +284,15 @@ footer {
   color: var(--error-red);
   font-size: 0.875rem;
   margin-top: var(--space-8);
+}
+// Nav Toggle
+header .btn {
+  background-color: var(--bg-card);
+  color: var(--bg-dark);
+}
+
+header .btn:hover {
+  background-color: var(--bg-dark);
+  color: var(--text-bright);
+  border: 1px solid var(--accent-hover);
 }
