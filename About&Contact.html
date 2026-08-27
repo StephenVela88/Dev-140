@@ -1,83 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="Wireframe.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About and Contact | Personal Portfolio</title>
+<link rel="stylesheet" href="Wireframe.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About and Contact | Personal Portfolio</title>
 </head>
 <body>
 
-  <header>
-    <h1>Navigation</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Projects&Work.html">Projects and Work</a></li>
-        <li><a href="About&Contact.html">About and Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+<h1>Navigation</h1>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="Projects&Work.html">Projects and Work</a></li>
+<li><a href="About&Contact.html">About and Contact</a></li>
+</ul>
+</nav>
+</header>
 
-  <main>
-    <section>
-      <h1>Contact</h1>
-      <p>[Image Placeholder: My Photo]</p>
-      <p>Personal Information About Myself</p>
-      <p>Text about how I would love to hear from you!</p>
-    </section>
+<main>
+<section>
+<h1>Contact</h1>
+<p>[Image Placeholder: My Photo]</p>
+<p>Personal Information About Myself</p>
+<p>Text about how I would love to hear from you!</p>
+</section>
 
-    <section>
-      <h2>Location and Availability</h2>
-      <ul>
-        <li>Located in Harlingen, Texas</li>
-        <li>Schedule: By appointment only</li>
-        <li>Only available on weekdays</li>
-        <li>Must bring lunch for both of us</li>
-      </ul>
-    </section>
+<section>
+<h2>Location and Availability</h2>
+<ul>
+<li>Located in Harlingen, Texas</li>
+<li>Schedule: By appointment only</li>
+<li>Only available on weekdays</li>
+<li>Must bring lunch for both of us</li>
+</ul>
+</section>
 
-    <section>
-      <h2>Get in Touch</h2>
-      <p>Please use the form below to send an inquiry.</p>
-      
-      <form action="#" method="POST">
-        <fieldset>
-          <legend>Contact Form</legend>
-          
-          <div class="form-group">
-            <label for="userName">Full Name:</label>
-            <input type="text" id="userName" name="userName" aria-describedby="nameError">
-            <span class="error-message" id="nameError">Please use your full name.</span>
-          </div>
+<section>
+<h2>Get in Touch</h2>
+<p>Please use the form below to send an inquiry.</p>
 
-          <div class="form-group">
-            <label for="userFood">Favorite Food:</label>
-            <input type="text" id="userFood" name="userFood" aria-describedby="foodError">
-            <span class="error-message" id="foodError">Please enter your favorite food.</span>
-          </div>
+<form action="#" method="POST">
+<fieldset>
+<legend>Contact Form</legend>
 
-          <div class="form-group">
-            <label for="userEmail">Email Address:</label>
-            <input type="email" id="userEmail" name="userEmail" aria-invalid="true" aria-describedby="emailError">
-            <span class="error-message" id="emailError" role="alert">Please enter a valid email address.</span>
-          </div>
+<div class="form-group">
+<label for="userName">Full Name:</label>
+<input type="text" id="userName" name="userName" aria-describedby="nameError">
+<span class="error-message" id="nameError">Please use your full name.</span>
+</div>
 
-          <div class="form-group">
-            <label for="userMessage">Message:</label>
-            <textarea id="userMessage" name="userMessage" rows="5"></textarea>
-          </div>
+<div class="form-group">
+<label for="userFood">Favorite Food:</label>
+<input type="text" id="userFood" name="userFood" aria-describedby="foodError">
+<span class="error-message" id="foodError">Please enter your favorite food.</span>
+</div>
 
-          <button type="submit" class="btn">Submit Message</button>
-        </fieldset>
-      </form>
+<div class="form-group">
+<label for="userEmail">Email Address:</label>
+<input type="email" id="userEmail" name="userEmail" aria-invalid="true" aria-describedby="emailError">
+<span class="error-message" id="emailError" role="alert">Please enter a valid email address.</span>
+</div>
 
-    </section>
-  </main>
+<div class="form-group">
+<label for="userMessage">Message:</label>
+<textarea id="userMessage" name="userMessage" rows="5" aria-describedby="messageError"></textarea>
+<span class="error-message" id="messageError">Please enter a message.</span>
+</div>
 
-  <footer>
-    <p>Closing Text Goes Here!</p>
-  </footer>
+<button type="submit" class="btn">Submit Message</button>
+</fieldset>
+</form>
+
+</section>
+</main>
+
+<footer>
+<p>Closing Text Goes Here!</p>
+</footer>
 
 <script src="ProjectMilestone.js" defer></script>
 
