@@ -30,13 +30,17 @@ if (footerContainer && document.title.includes('Home')) {
   const apiSection = document.createElement('section')
   apiSection.classList.add('center-and-border')
   
+  const sectionTitle = document.createElement('h2')
+  sectionTitle.textContent = 'Random Fact Section'
+  
   const apiTitle = document.createElement('h3')
-  const apiContent = document.createElement('p')
-
   apiTitle.textContent = 'Did You Know?'
+  
+  const apiContent = document.createElement('p')
   apiContent.textContent = 'Loading a random fact...'
   apiContent.setAttribute('aria-live', 'polite')
 
+  apiSection.appendChild(sectionTitle)
   apiSection.appendChild(apiTitle)
   apiSection.appendChild(apiContent)
   
