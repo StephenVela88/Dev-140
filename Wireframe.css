@@ -2,25 +2,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&family=Rubik:wght@400&display=swap');
 
 :root {
-/*Shortcuts - Colors*/
---bg-dark: #0d1b2a;
---bg-card: #1b263b;
---text-main: #ff7f50;
---text-bright: #FFFFFF;
---accent-orange: #ff7f50;
---accent-hover: #ff7f50;
---error-red: #b94c24;
+  /* Shortcuts Colors */
+  --bg-dark: #0d1b2a;
+  --bg-card: #1b263b;
+  --bg-highlight: #415a77; 
+  --text-main: #e0e1dd; 
+  --text-bright: #FFFFFF;
+  --accent-orange: #ff7f50;
+  --accent-hover: #ff9f7a; 
+  --error-red: #b94c24;
 
-/*Shortcuts - Spacing*/
---space-8: 8px;
---space-16: 16px;
---space-24: 24px;
---space-32: 32px;
---space-48: 48px;
---space-64: 64px;
---space-16x16: 16px 16px;
+  /* Shortcuts Spacing */
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
 }
 
+/* Center Shortcut */
+.center-and-border {
+  align-items: center;
+  background-color: var(--bg-card);
+  border: 2px solid var(--accent-orange);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto var(--space-32) auto;
+  max-width: 800px;
+  padding: var(--space-32);
+  text-align: center;
+}
 
 * {
 box-sizing: border-box;
@@ -323,4 +336,29 @@ transition:transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: var(--space-16);
   max-width: 300px;
   width: 100%;
+}
+
+footer {
+  border-top: none;
+  margin-top: var(--space-64);
+  padding-top: 0;
+}
+
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-24);
+  margin-bottom: var(--space-16);
+}
+
+.social-links a {
+  color: var(--text-bright);
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-orange);
+  transform: translateY(-5px);
 }
