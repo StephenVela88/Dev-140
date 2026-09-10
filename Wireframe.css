@@ -213,10 +213,11 @@ padding: var(--space-24);
 
 .card,
 article h2 {
-background-color: var(--bg-card);
-border: 1px solid var(--accent-orange);
-border-radius: 8px;
-padding: var(--space-16);
+  background-color: var(--bg-card);
+  border: 1px solid var(--accent-orange);
+  border-radius: 8px;
+  padding: var(--space-16);
+  text-align: center;
 }
 
 article ul {
