@@ -19,9 +19,28 @@
   --space-32: 32px;
   --space-48: 48px;
   --space-64: 64px;
+<<<<<<< HEAD
   --space-16x16: 16px 16px;
 }
 
+=======
+}
+
+/* Center Shortcut */
+.center-and-border {
+  align-items: center;
+  background-color: var(--bg-card);
+  border: 2px solid var(--accent-orange);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto var(--space-32) auto;
+  max-width: 800px;
+  padding: var(--space-32);
+  text-align: center;
+}
+
+>>>>>>> e2b6f55caffd33028f36d2be9f7be16f2aa6c1e4
 * {
 box-sizing: border-box;
 margin: 0;
@@ -308,7 +327,27 @@ background-color: var(--error-red);
 transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+<<<<<<< HEAD
 /* Social Links Layout */
+=======
+.profile-frame {
+  border: 4px solid var(--accent-orange);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--bg-dark);
+  display: block;
+  margin-bottom: var(--space-16);
+  max-width: 300px;
+  width: 100%;
+}
+
+footer {
+  border-top: none;
+  margin-top: var(--space-64);
+  padding-top: 0;
+}
+
+
+>>>>>>> e2b6f55caffd33028f36d2be9f7be16f2aa6c1e4
 .social-links {
   display: flex;
   justify-content: center;
@@ -326,6 +365,7 @@ transition:transform 0.3s ease, box-shadow 0.3s ease;
   color: var(--accent-orange);
   transform: translateY(-5px);
 }
+<<<<<<< HEAD
 
 .center-and-border {
   align-items: center;
@@ -356,3 +396,5 @@ footer {
   max-width: 300px;
   width: 100%;
 }
+=======
+>>>>>>> e2b6f55caffd33028f36d2be9f7be16f2aa6c1e4
