@@ -27,27 +27,30 @@ navContainer.parentNode.insertBefore(menuBtn, navContainer)
 const footerContainer = document.querySelector('footer')
 
 if (footerContainer && document.title.includes('Home')) {
-const apiArticle = document.createElement('article')
-const apiTitle = document.createElement('h3')
-const apiContent = document.createElement('p')
+  const apiSection = document.createElement('section')
+  apiSection.classList.add('center-and-border')
+  
+  const apiTitle = document.createElement('h3')
+  const apiContent = document.createElement('p')
 
-apiTitle.textContent = 'Did You Know?'
-apiContent.textContent = 'Loading a random fact...'
-apiContent.setAttribute('aria-live', 'polite')
+  apiTitle.textContent = 'Did You Know?'
+  apiContent.textContent = 'Loading a random fact...'
+  apiContent.setAttribute('aria-live', 'polite')
 
-apiArticle.appendChild(apiTitle)
-apiArticle.appendChild(apiContent)
-footerContainer.appendChild(apiArticle)
+  apiSection.appendChild(apiTitle)
+  apiSection.appendChild(apiContent)
+  
+  footerContainer.parentNode.insertBefore(apiSection, footerContainer)
 
-fetch('https://uselessfacts.jsph.pl/api/v2/facts/random')
-.then(response => response.json())
-.then(data => {
-apiContent.textContent = data.text
-})
-.catch(error => {
-apiContent.textContent = 'Could not load a fact at this time.'
-console.error('API Error:', error)
-})
+  fetch('https://uselessfacts.jsph.pl/api/v2/facts/random')
+    .then(response => response.json())
+    .then(data => {
+      apiContent.textContent = data.text
+    })
+    .catch(error => {
+      apiContent.textContent = 'Could not load a fact at this time.'
+      console.error('API Error:', error)
+    })
 }
 
 // Part 3
