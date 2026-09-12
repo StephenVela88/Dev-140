@@ -287,12 +287,12 @@ background-color: var(--accent-orange);
 border: none;
 border-radius: 4px;
 color: var(--text-bright);
--webkit-text-stroke: 1px var(--bg-highlight);
+-webkit-text-stroke: .5px var(--bg-dark);
 text-shadow: 2px 2px 4px var(--bg-dark);
 cursor: pointer;
 display: inline-block;
 font-family: 'Work Sans', sans-serif;
-font-size: 20px;
+font-size: 15px;
 font-weight: 600;
 padding: var(--space-8) var(--space-16);
 }

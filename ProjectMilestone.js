@@ -4,7 +4,7 @@ const navList = document.querySelector('nav ul')
 
 if (navContainer && navList) {
 const menuBtn = document.createElement('button')
-menuBtn.textContent = 'Menu'
+menuBtn.textContent = 'MENU'
 menuBtn.classList.add('btn')
 
 menuBtn.setAttribute('aria-expanded', 'false')
