@@ -6,12 +6,12 @@ if (navContainer && navList) {
 const menuBtn = document.createElement('button')
 menuBtn.textContent = 'MENU'
 menuBtn.classList.add('btn')
+menuBtn.id = 'menu-btn'
 
 menuBtn.setAttribute('aria-expanded', 'false')
 menuBtn.setAttribute('aria-controls', 'main-nav')
 navList.id = 'main-nav'
 
-// stay closed
 navList.style.display = 'none'
 
 menuBtn.addEventListener('click', () => {
@@ -74,18 +74,6 @@ isFormValid = false
 } else {
 nameError.style.display = 'none'
 nameInput.setAttribute('aria-invalid', 'false')
-}
-
-const foodInput = document.getElementById('userFood')
-const foodError = document.getElementById('foodError')
-
-if (foodInput.value.trim() === '') {
-foodError.style.display = 'block'
-foodInput.setAttribute('aria-invalid', 'true')
-isFormValid = false
-} else {
-foodError.style.display = 'none'
-foodInput.setAttribute('aria-invalid', 'false')
 }
 
 const emailInput = document.getElementById('userEmail')
