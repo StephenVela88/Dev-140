@@ -93,6 +93,18 @@ emailError.style.display = 'none'
 emailInput.setAttribute('aria-invalid', 'false')
 }
 
+const dateTimeInput = document.getElementById('userDateTime')
+const dateTimeError = document.getElementById('dateTimeError')
+
+if (dateTimeInput.value.trim() === '') {
+dateTimeError.style.display = 'block'
+dateTimeInput.setAttribute('aria-invalid', 'true')
+isFormValid = false
+} else {
+dateTimeError.style.display = 'none'
+dateTimeInput.setAttribute('aria-invalid', 'false')
+}
+
 const messageInput = document.getElementById('userMessage')
 const messageError = document.getElementById('messageError')
 
