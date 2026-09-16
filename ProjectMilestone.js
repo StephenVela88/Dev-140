@@ -4,7 +4,11 @@ const navList = document.querySelector('nav ul')
 
 if (navContainer && navList) {
 const menuBtn = document.createElement('button')
-menuBtn.textContent = 'MENU'
+
+const svgIcon = '<svg viewBox="0 0 100 80" width="20" height="20" fill="currentColor"><rect width="100" height="15" rx="8"></rect><rect y="32" width="100" height="15" rx="8"></rect><rect y="64" width="100" height="15" rx="8"></rect></svg>'
+menuBtn.innerHTML = svgIcon
+
+menuBtn.setAttribute('aria-label', 'Toggle Navigation')
 menuBtn.classList.add('btn')
 menuBtn.id = 'menu-btn'
 
