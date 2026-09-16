@@ -1,4 +1,25 @@
 Wireframe Readme:
+Update 9/16/26
+
+Final updates for Capstone.
+Updated Wave: 0 Errors
+AIM score 10 of 10
+
+1 alert(s) - PDF link
+Made sure Aria and hyperlink both had .PDF info for users. 
+
+Mobile layout updated and applied unique features for mobile layouts.
+Desktop added hyperlinks for outside support. (GitHub, LinkedIn and Resume)
+Took Feedback and incorporated to match my tone and theme.
+
+Added more professional tone and removed joke form line and added date and scheduler. 
+
+Happy with the turnout.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 Wave Checks and Fixes:
 
@@ -15,7 +36,7 @@ Text and Background Passed Both Tests (WCAG AA & AAA)
 Solutions:
 Removed both links and replaced with description text since they were just redirects from the main top link. I wanted to have multiple directions to the other pages, but were not necessary   
 
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Assignment Gestalt Additions and Works:
 
