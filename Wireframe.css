@@ -97,6 +97,12 @@ font-size: 1.25rem;
 margin-bottom: var(--space-8);
 }
 
+nav {
+display: flex;
+align-items: center;
+gap: var(--space-16);
+}
+
 nav ul {
 display: flex;
 flex-wrap: wrap;
@@ -231,8 +237,6 @@ padding-left: var(--space-24);
 }
 
 header .btn {
-margin-left: auto;
-margin-right: var(--space-16);
 color: var(--text-bright);
 -webkit-text-stroke: .5px var(--bg-dark);
 text-shadow: 2px 2px 4px var(--bg-dark);
