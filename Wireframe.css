@@ -247,14 +247,24 @@ font-size: 15px;
 .social-links {
   display: flex;
   justify-content: center;
-  gap: var(--space-24);
-  margin-bottom: var(--space-16);
+  gap: var(--space-32);
+  margin-bottom: var(--space-24);
 }
 
 .social-links a {
+  align-items: center;
   color: var(--text-bright);
-  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  gap: var(--space-8);
   transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a i {
+  font-size: 2rem;
 }
 
 .social-links a:hover {

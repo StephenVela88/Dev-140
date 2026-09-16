@@ -24,7 +24,7 @@ navList.style.display = isHidden ? 'flex' : 'none'
 menuBtn.setAttribute('aria-expanded', isHidden ? 'true' : 'false')
 })
 
-navContainer.parentNode.insertBefore(menuBtn, navContainer)
+navContainer.insertBefore(menuBtn, navList)
 }
 
 // Part 2
